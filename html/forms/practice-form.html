@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>Alex's Pizza Delivery
+	<title>Pizza Form</title>
+</head>
+<body>
+<form name="Alex's Pizza Delivery" action="success.html" method="post">
+	<fieldset>
+    <div>
+      <label>full name:</label>
+      <input type="text" name="First and last name">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+
+    <div>
+      <label>Phone number:</label>
+      <input type="text" name="phone number" placeholder="xxx-xxx-xxxx">
+    </div>
+    </fieldset>
+    <fieldset>
+     <div>    
+      <label>Desired delivery date:</label>
+      <input type="date" name="date">
+    </div>
+
+    <div>
+      <label>Desired delivery time:</label>
+      <input type="text" name="Delivery time" placeholder="00_00_am/pm">
+    </div>
+    </fieldset>
+    <fieldset>
+    <legend>Create your pizza</legend>
+    <p>
+    <h1>Pizza Crust</h1>
+    </p>
+    	<div>
+    		<label>What type of pizza crust would you like?</label>
+    		<select name="pizza crust"
+    			<option> value="crust">Thin crust</option>
+    			<option value="crust">Deep dish</option>
+    			<option value="crust">Cornmeal crust</option>
+    			<option value="crust">Thin crust</option>	
+    			</select>
+    	</div>
+    	<p>
+    	<h1>Toppings</h1>
+    	</p>
+    	<p>
+    		<label>
+    			<input type="checkbox" name="topping" value="pepperoni">
+    			pepperoni
+    		</label>
+    	</p>
+    	<p>
+    		<label>
+    			<input type="checkbox" name="topping" value="Sausage">
+    			Sausage
+    		</label>
+    	</p>
+    	<p>
+    		<label>
+    			<input type="checkbox" name="topping" value="Olives">
+    			Olives
+    		</label>
+    	</p>
+    	<p>
+    		<label>
+    			<input type="checkbox" name="topping" value="Mushrooms">
+    			Mushrooms
+    		</label>
+    	</p>
+    </fieldset>
+    <p>
+    	<textarea name="comments" placeholder="Additional comments"></textarea>
+    </p>
+    <p>
+    	<button>Place order</button>
+    </p>
+</body>
+</html>
