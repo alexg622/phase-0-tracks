@@ -5,7 +5,7 @@ blockquote {
 }
 body {
   max-width: 90%;
-  min-width: 350px
+  margin: auto;
 
 }
 #external-links{
@@ -46,8 +46,17 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 350px) {
+  #external-links {
+    position: relative;
+    float: none;
+
+
+  }
+}
 @media screen and (max-width: 500px) {
-  body {
-    background-color: hotpink;
+  #h2 {
+    font-size: 1.25em;
   }
 }
