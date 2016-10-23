@@ -3,6 +3,22 @@ blockquote {
   padding: 15px;
   margin-left: 0px;
 }
+body {
+  max-width: 90%;
+  margin: auto;
+
+}
+#external-links{
+  position: fixed;
+  max-width: 10%;
+  display: block;
+  float: left;
+}
+main {
+  margin-left: 25%;
+  max-width: 80%;
+  display: block;
+}
 
 cite {
   display: block;
@@ -29,4 +45,18 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+@media screen and (max-width: 350px) {
+  #external-links {
+    position: relative;
+    float: none;
+
+
+  }
+}
+@media screen and (max-width: 500px) {
+  #h2 {
+    font-size: 1.25em;
+  }
 }
