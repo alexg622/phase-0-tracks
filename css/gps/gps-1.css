@@ -1,0 +1,35 @@
+* {
+  font-family: helvetica;
+}
+
+header {
+  background-color: skyblue;
+  border: 1px solid black;
+}
+
+article {
+  background-color: pink;
+  border: 1px solid black;
+}
+
+.column-1 {
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  /* width: 48%; */
+  float: left;
+  width: 48%;
+}
+
+.column-2 {
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  /* width: 48%; */
+  float: right;
+  width: 48%;
+}
+
+footer {
+  clear: both;
+  background-color: skyblue;
+  border: 1px solid black;
+}
