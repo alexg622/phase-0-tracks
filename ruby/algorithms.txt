@@ -1,0 +1,10 @@
+Elevator task:
+for each person that walks into the elevator ask them "what floor would you like to go to?"
+press the button of the floor that they requested. 
+If there is no button for the floor that they requested tell them "I'm sorry, that floor is not an option. Please let me know what floor you would like to go to."
+
+Order cheese pizza:
+call nizarios pizza
+when someone answers the phone reply with "I would like to place an order for take out."
+wait for them to ask for your order and then say "I would like a large cheese pizza delivered to my address and will be paying in cash when you get here. Thank you. Good bye"
+If no one answers after 6 rings hang up and call again until someone does answer. 
