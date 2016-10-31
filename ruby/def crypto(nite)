@@ -1,0 +1,13 @@
+def crypto(nite)
+	index = 0
+	until index > nite.length
+	if nite[index] == "z"
+	nite[index] = "a"
+	elsif password[index] == " "
+	else
+	nite[index] = nite[index].next!
+	end
+	index += 1
+	puts "#[password]"
+	return nite
+end 

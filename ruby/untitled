@@ -1,0 +1,13 @@
+
+def mystr2(str)
+
+index = 0 
+password = str
+
+while index < password.length 
+p password[index].next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.delete("a")
+index += 1 
+end 
+end
+
+mystr2("alex is my name")
