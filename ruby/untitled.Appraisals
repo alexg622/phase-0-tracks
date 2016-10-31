@@ -1,13 +1,12 @@
-"agent".index("agent")
-
 def mystr(str)
 
 index = 0 
-password = str
+password = ""
 
 while index < password.length 
-p password[index].next.delete("a")
+password[index].next.delete("a") = str
 index += 1 
+puts str
 end 
 end
 

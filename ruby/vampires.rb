@@ -1,3 +1,5 @@
+puts "how many employess will be processed?"
+number = gets.chomp
 puts "what is your name?"
 name = gets.chomp 
 puts "how old are you?"
@@ -8,7 +10,8 @@ puts "would you like us to order garlic bread? y/n"
 garlic = gets.chomp
 puts "would you like to enroll in the company's health insurance? y/n"
 health = gets.chomp 
-year = age - 2016
+
+until number == number
 
 if garlic && health
 	puts "probably not a vampire"
@@ -22,3 +25,4 @@ elsif name = "Tu Fang"
 	puts "vampire"
 else puts "Results incunclusive"
 end 
+
