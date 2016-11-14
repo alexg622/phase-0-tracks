@@ -10,4 +10,10 @@ class Dancer
 	def dancer_age 
 		@age
 	end 
+	def pirouette
+		p "*twirls*"
+	end 
+	def bow 
+		p "*bows*"
+	end 
 end 
