@@ -22,7 +22,7 @@ end
 it "bows to a partner" do
   expect(dancer.bow).to eq "*bows*"
 end
-it "can add parters to the dance card queue" do
+it "can add partners to the dance card queue" do
   dancer.queue_dance_with("Mikhail Baryshnikov")
   expect(dancer.card).to eq ["Mikhail Baryshnikov"]
   dancer.queue_dance_with("Anna Pavlova")
