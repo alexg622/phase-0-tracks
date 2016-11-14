@@ -3,6 +3,7 @@ class Dancer
 	def initialize(name, age)
 		@name = name
 		@age = age
+		@tutucolor 
 	end 
 	def dancer_name
 		@name
@@ -16,4 +17,8 @@ class Dancer
 	def bow 
 		p "*bows*"
 	end 
+	def tutu_color(color) 
+		p "your tutu color has changed to #{color}"
+	end 
+		
 end 
