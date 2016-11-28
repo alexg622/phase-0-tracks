@@ -1,0 +1,74 @@
+							
+							SCHEMA
+
+Pizza Table 									Restaurants
+id int primary key								id int primary key
+toppings VARCHAR(300)							name VARCHAR(300)
+price INT
+good BOOLEAN
+Rest_id INT
+fk(restaurant_id) ref restaurants(id)
+
+
+
+1. 
+sqlite> select * from pizza_table;
+1|cheese, sauce|8|true|1
+2|cheese, sauce, chicken, pickles|10|false|1
+3|no cheese, sauce, chicken, mushrooms|8|false|2
+4|extra cheese, sauce, pepperoni, bacon|12|true|1
+5|cheese, pesto sauce, chicken, mushrooms|14|true|2
+
+
+2.
+sqlite> UPDATE restaurants SET name="Joe's amazing pizza" WHERE name="Joe's pizza"; 
+
+
+3.
+sqlite> select * from pizza_table, restaurants where pizza_table.restaurant_id = restaurants.id;
+1|cheese, sauce|8|true|1|1|Joe's amazing pizza
+2|cheese, sauce, chicken, pickles|10|false|1|1|Joe's amazing pizza
+3|no cheese, sauce, chicken, mushrooms|8|false|2|2|Bill's pizza
+4|extra cheese, sauce, pepperoni, bacon|12|true|1|1|Joe's amazing pizza
+5|cheese, pesto sauce, chicken, mushrooms|14|true|2|2|Bill's pizza
+
+Or is this it?
+
+sqlite> select * from pizza_table, restaurants where pizza_table.restaurant_id = restaurants.id;
+1|cheese, sauce|8|true|1|1|Joe's amazing pizza
+2|cheese, sauce, chicken, pickles|10|false|1|1|Joe's amazing pizza
+3|no cheese, sauce, chicken, mushrooms|8|false|2|2|Bill's pizza
+4|extra cheese, sauce, pepperoni, bacon|12|true|1|1|Joe's amazing pizza
+5|cheese, pesto sauce, chicken, mushrooms|14|true|2|2|Bill's pizza
+sqlite> select * from pizza_table, restaurants;
+1|cheese, sauce|8|true|1|1|Joe's amazing pizza
+1|cheese, sauce|8|true|1|2|Bill's pizza
+2|cheese, sauce, chicken, pickles|10|false|1|1|Joe's amazing pizza
+2|cheese, sauce, chicken, pickles|10|false|1|2|Bill's pizza
+3|no cheese, sauce, chicken, mushrooms|8|false|2|1|Joe's amazing pizza
+3|no cheese, sauce, chicken, mushrooms|8|false|2|2|Bill's pizza
+4|extra cheese, sauce, pepperoni, bacon|12|true|1|1|Joe's amazing pizza
+4|extra cheese, sauce, pepperoni, bacon|12|true|1|2|Bill's pizza
+5|cheese, pesto sauce, chicken, mushrooms|14|true|2|1|Joe's amazing pizza
+5|cheese, pesto sauce, chicken, mushrooms|14|true|2|2|Bill's pizza
+
+4. 
+sqlite> select toppings, name, price from pizza_table, restaurants where pizza_table.restaurant_id = restaurants.id;
+cheese, sauce|Joe's amazing pizza|8
+cheese, sauce, chicken, pickles|Joe's amazing pizza|10
+no cheese, sauce, chicken, mushrooms|Bill's pizza|8
+extra cheese, sauce, pepperoni, bacon|Joe's amazing pizza|12
+cheese, pesto sauce, chicken, mushrooms|Bill's pizza|14
+
+5. 
+sqlite> delete from pizza_table where good = "false";
+
+
+6.
+sqlite> select * from pizza_table 
+   ...> join restaurants on pizza_table.restaurant_id = restaurants.id;
+1|cheese, sauce|8|true|1|1|Joe's amazing pizza
+4|extra cheese, sauce, pepperoni, bacon|12|true|1|1|Joe's amazing pizza
+5|cheese, pesto sauce, chicken, mushrooms|14|true|2|2|Bill's pizza
+
+
