@@ -1,0 +1,25 @@
+1. sqlite> select * from reviews
+   ...> join names on reviews.name_id = names.id
+   ...> join businesses on reviews.business_id = businesses.id;
+1|1|3|4|Great food!|3|Harry|Bennet|1|pete's coffee
+2|2|4|5|Really good food!|4|Jerry|White|2|starbucks
+3|3|1|3|Okay food.|1|Bill|Stark|3|mel's diner
+
+2. sqlite> select business, first, last, stars, comment from reviews 
+   ...> join names on reviews.name_id = names.id
+   ...> join businesses on reviews.business_id = businesses.id;
+pete's coffee|Harry|Bennet|4|Great food!
+starbucks|Jerry|White|5|Really good food!
+mel's diner|Bill|Stark|3|Okay food.
+
+							
+
+							Salary Table
+
+Employee					Salary						Job
+Id (int primary key)       id (int primary key)       id (int primary key)
+first_name (Varchar 300)   salary (INT)               job (varchar 300)
+last_name (Varchar 300)    employee_id (INT)
+						   job_id (INT)
+				fk(employee_id) references employee(id)
+				fk(job_id) references job(id)
