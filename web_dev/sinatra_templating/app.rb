@@ -17,6 +17,15 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/campus' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  erb :campus
+end
+
+get '/campus/new' do
+  erb :new_campus
+end
+
 # create new students via
 # a form
 post '/students' do
