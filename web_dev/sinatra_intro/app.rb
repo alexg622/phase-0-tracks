@@ -18,6 +18,20 @@ get '/about/:person' do
   person = params[:person]
   "#{person} is a programmer, and #{person} is learning Sinatra."
 end
+#contact route 
+get '/contact/:address' do
+  address = params[:address]
+  "#{address}"
+end
+
+get '/great_job' do 
+  name = params[:name]
+  if name 
+    "Great job #{name}!"
+  else
+    "Great job!"
+  end 
+end 
 
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
