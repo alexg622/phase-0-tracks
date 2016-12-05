@@ -8,9 +8,9 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
-get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
-end
+#get '/' do
+ # "#{params[:name]} is #{params[:age]} years old."
+#end
 
 # write a GET route with
 # route parameters
@@ -23,11 +23,11 @@ get '/contact/:address' do
   address = params[:address]
   "#{address}"
 end
-
-get '/great_job' do 
-  name = params[:name]
-  if name 
-    "Great job #{name}!"
+#Great job 
+get '/' do 
+  name1 = params[:name1]
+  if name1 
+    "Great job #{name1}!"
   else
     "Great job!"
   end 
@@ -35,6 +35,10 @@ end
 
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
+end
+
+get '/:number1/add/:number2' do
+  "Here is the sum of your two numbers:" "#{params[:number1].to_i} + #{params[:number2].to_i}"
 end
 
 # write a GET route that retrieves
